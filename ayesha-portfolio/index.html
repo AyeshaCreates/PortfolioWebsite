@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayeesha | AI & Data Science Engineer Portfolio</title>
+    <meta name="description" content="Portfolio of Ayeesha, an AI & Data Science Engineering Student specializing in Deep Learning, Computer Vision, and explainable ML pipelines.">
+    <meta name="keywords" content="Ayeesha, AI Engineer, Data Scientist, Portfolio, Machine Learning, Deep Learning, Computer Vision, Python, PyTorch, TensorFlow">
+    <meta name="author" content="Ayeesha">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ayeesha.dev/">
+    <meta property="og:title" content="Ayeesha | AI & Data Science Engineer Portfolio">
+    <meta property="og:description" content="Portfolio of Ayeesha, specializing in Deep Learning models, Computer Vision, and high-performance ML pipelines.">
+    <meta property="og:image" content="assets/images/profile.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://ayeesha.dev/">
+    <meta property="twitter:title" content="Ayeesha | AI & Data Science Engineer Portfolio">
+    <meta property="twitter:description" content="Portfolio of Ayeesha, specializing in Deep Learning models, Computer Vision, and high-performance ML pipelines.">
+    <meta property="twitter:image" content="assets/images/profile.jpg">
+
+    <!-- Preconnect Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230c1020'/%3E%3Ctext x='25' y='72' font-family='sans-serif' font-weight='bold' font-size='60' fill='%233b82f6'%3EA%3C/text%3E%3C/svg%3E">
+</head>
+<body class="dark-theme">
+    <!-- Interactive Background Canvas -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="site-header">
+        <div class="header-container">
+            <a href="#" class="logo" id="header-logo" aria-label="Ayeesha Portfolio Home">
+                <span class="logo-accent">&lt;</span>Ayeesha<span class="logo-accent"> /&gt;</span>
+            </a>
+            
+            <nav class="nav-links" id="desktop-nav" aria-label="Main Navigation">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#certifications" class="nav-link">Certifications</a>
+                <a href="#contact" class="nav-link nav-cta">Get In Touch</a>
+            </nav>
+
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-btn" aria-label="Toggle light and dark theme">
+                    <!-- Light Mode Icon (Sun) -->
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <!-- Dark Mode Icon (Moon) -->
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <button id="mobile-menu-toggle" class="mobile-menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="mobile-nav-drawer" aria-hidden="true">
+        <nav class="mobile-nav-links" aria-label="Mobile Navigation">
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#projects" class="mobile-nav-link">Projects</a>
+            <a href="#skills" class="mobile-nav-link">Skills</a>
+            <a href="#certifications" class="mobile-nav-link">Certifications</a>
+            <a href="#contact" class="mobile-nav-link">Get In Touch</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-grid">
+                    <div class="hero-text-content fade-in-up">
+                        <div class="hero-badge-container">
+                            <span class="badge-glow"></span>
+                            <span class="hero-badge">Open for Fall 2026 / 2027 Opportunities</span>
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="gradient-text">Ayeesha</span>
+                        </h1>
+                        
+                        <h2 class="hero-subtitle">
+                            I build <span class="txt-rotate" data-period="2000" data-rotate='[ "Deep Learning models.", "interpretable AI systems.", "data science pipelines." ]'></span><span class="cursor-blink">|</span>
+                        </h2>
+                        
+                        <p class="hero-description">
+                            Artificial Intelligence & Data Science Engineering student with a passion for designing production-ready systems, medical AI explainability, and high-performance predictive architectures.
+                        </p>
+
+                        <!-- Recruiter Action Panel -->
+                        <div class="recruiter-panel">
+                            <div class="recruiter-panel-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                                <span>Recruiter Quick Actions</span>
+                            </div>
+                            <div class="recruiter-actions">
+                                <a href="assets/resume.pdf" class="btn btn-primary" download="Ayeesha_Resume.pdf" id="action-download-cv">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                                    <span>Download Resume</span>
+                                </a>
+                                <button class="btn btn-secondary" id="action-copy-email" aria-live="polite">
+                                    <svg class="mail-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <span id="copy-email-text">Copy Email Address</span>
+                                </button>
+                                <a href="#contact" class="btn btn-tertiary">
+                                    <span>Contact Directly</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-visual fade-in">
+                        <div class="profile-frame">
+                            <img src="assets/images/profile.jpg" alt="Ayeesha" class="profile-image" loading="eager">
+                            <div class="glow-ring"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-scroll-indicator">
+                <a href="#about" aria-label="Scroll to about section">
+                    <span class="scroll-mouse">
+                        <span class="scroll-wheel"></span>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About & Education Section -->
+        <section id="about" class="about-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="section-subtitle">Bridging engineering principles with artificial intelligence</p>
+                </div>
+                
+                <div class="about-grid">
+                    <div class="about-bio">
+                        <p class="about-lead">
+                            I am a detail-oriented Artificial Intelligence and Data Science Engineering student with a strong technical foundation in machine learning, deep learning, computer vision, and structured analytics.
+                        </p>
+                        <p class="about-text">
+                            I thrive on transforming theoretical advancements in AI into highly-reliable, interpretable, and production-grade software solutions. Whether it's training deep Convolutional Neural Networks to achieve high clinical accuracies, engineering robust pipelines to discover critical indicators in business churn, or optimizing computer vision models for deployment on edge devices, my goal remains the same: to design software that is practical, accessible, and mathematically sound.
+                        </p>
+                        
+                        <div class="stat-grid">
+                            <div class="stat-card">
+                                <span class="stat-number">9.2</span>
+                                <span class="stat-label">Current CGPA</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">4+</span>
+                                <span class="stat-label">Core Certifications</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number">94.5%</span>
+                                <span class="stat-label">Model Accuracy achieved</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="education-card">
+                        <div class="edu-card-header">
+                            <div class="edu-icon-container">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+                            </div>
+                            <h3 class="edu-card-title">Education</h3>
+                        </div>
+                        
+                        <div class="edu-item">
+                            <span class="edu-period">2023 – 2027</span>
+                            <h4 class="edu-degree">Bachelor of Engineering in Artificial Intelligence & Data Science</h4>
+                            <p class="edu-institution">XYZ College of Engineering <span class="edu-meta">(Affiliated with State University)</span></p>
+                            
+                            <h5 class="edu-coursework-title">Rigorous Coursework:</h5>
+                            <div class="coursework-tags">
+                                <span class="course-tag">Machine Learning</span>
+                                <span class="course-tag">Deep Learning</span>
+                                <span class="course-tag">Natural Language Processing</span>
+                                <span class="course-tag">Data Structures & Algorithms</span>
+                                <span class="course-tag">Big Data Analytics</span>
+                                <span class="course-tag">Database Management Systems</span>
+                                <span class="course-tag">Probability & Statistics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Selected Projects</h2>
+                    <p class="section-subtitle">Real-world AI systems built with mathematical rigor</p>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card" id="project-pneumonia">
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-tag">Computer Vision / Deep Learning</span>
+                                <span class="project-metric">94.5% Accuracy</span>
+                            </div>
+                            <h3 class="project-title">Explainable Pneumonia Detection Pipeline</h3>
+                            <p class="project-desc">
+                                A high-precision medical imaging classifier designed to analyze chest X-ray scans. Utilizing transfer learning methodologies on deep convolutional networks, the system includes model explainability to support clinical decision workflows.
+                            </p>
+                            <ul class="project-bullet-list">
+                                <li>Trained a deep Convolutional Neural Network (CNN) leveraging **ResNet50** and fine-tuning configurations via TensorFlow/Keras.</li>
+                                <li>Integrated **Grad-CAM (Gradient-weighted Class Activation Mapping)** to generate heatmaps highlighting classification factors, enhancing clinical trust.</li>
+                                <li>Achieved an validation accuracy of **94.5%** through learning rate scheduling, data augmentation, and dropout layers.</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span class="stack-badge">TensorFlow</span>
+                                <span class="stack-badge">ResNet50</span>
+                                <span class="stack-badge">Keras</span>
+                                <span class="stack-badge">OpenCV</span>
+                                <span class="stack-badge">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ayeesha/pneumonia-detection" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span>Code Repository</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card" id="project-churn">
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-tag">Predictive Analytics</span>
+                                <span class="project-metric">0.89 AUC-ROC</span>
+                            </div>
+                            <h3 class="project-title">End-to-End Customer Churn Pipeline</h3>
+                            <p class="project-desc">
+                                A predictive data science pipeline built to analyze telecom customer data, highlight key drivers of user attrition, and identify customers with high attrition risk to drive customer retention efforts.
+                            </p>
+                            <ul class="project-bullet-list">
+                                <li>Engineered a robust preprocessing and feature-engineering pipeline using Python (Scikit-Learn, Pandas, NumPy).</li>
+                                <li>Developed and compared multiple classifiers, optimizing hyperparameters on **Random Forest** and **XGBoost** models via Grid Search CV.</li>
+                                <li>Achieved an **AUC-ROC of 0.89** and isolated key risk factors (such as contract duration, payment type, and monthly usage metrics).</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span class="stack-badge">Scikit-Learn</span>
+                                <span class="stack-badge">XGBoost</span>
+                                <span class="stack-badge">Pandas</span>
+                                <span class="stack-badge">Matplotlib</span>
+                                <span class="stack-badge">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ayeesha/customer-churn" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span>Code Repository</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card" id="project-attendance">
+                        <div class="project-body">
+                            <div class="project-meta">
+                                <span class="project-tag">Computer Vision / IoT</span>
+                                <span class="project-metric">Real-Time Processing</span>
+                            </div>
+                            <h3 class="project-title">Smart Face Recognition Attendance</h3>
+                            <p class="project-desc">
+                                A real-time edge security system designed to detect and log student attendance via video capture. Employs lightweight computer vision architectures for high speed and low hardware requirements.
+                            </p>
+                            <ul class="project-bullet-list">
+                                <li>Developed a functional real-time face detection module utilizing OpenCV and the **Haar Cascade** classifier.</li>
+                                <li>Implemented the **Local Binary Patterns Histograms (LBPH)** algorithm for robust localized facial pattern recognition.</li>
+                                <li>Created a secure database integration using SQL to automatically record timestamps and logs.</li>
+                            </ul>
+                            <div class="project-stack">
+                                <span class="stack-badge">OpenCV</span>
+                                <span class="stack-badge">LBPH Algorithm</span>
+                                <span class="stack-badge">MySQL</span>
+                                <span class="stack-badge">Python</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/ayeesha/face-recognition-attendance" class="project-link" target="_blank" rel="noopener noreferrer">
+                                    <span>Code Repository</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Technical Expertise</h2>
+                    <p class="section-subtitle">Proficiencies supporting data workflows and model operations</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <!-- Category 1 -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            <h3 class="category-title">Programming</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>SQL (Structured Query Language)</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 2 -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                            <h3 class="category-title">Machine & Deep Learning</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>PyTorch & TensorFlow</li>
+                            <li>Keras & Scikit-Learn</li>
+                            <li>Computer Vision (OpenCV)</li>
+                            <li>NLP (Hugging Face)</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 3 -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            <h3 class="category-title">Data & Analytics</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>Pandas & NumPy</li>
+                            <li>Matplotlib & Seaborn</li>
+                            <li>SciPy (Statistical Modeling)</li>
+                            <li>Tableau & Power BI</li>
+                        </ul>
+                    </div>
+
+                    <!-- Category 4 -->
+                    <div class="skills-category-card">
+                        <div class="category-header">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                            <h3 class="category-title">Tools & Deployments</h3>
+                        </div>
+                        <ul class="skills-list">
+                            <li>Git & GitHub versioning</li>
+                            <li>Docker containers</li>
+                            <li>AWS (EC2, S3 infrastructure)</li>
+                            <li>VS Code & Jupyter Ecosystem</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications-section scroll-reveal">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Professional Credentials</h2>
+                    <p class="section-subtitle">Industry specializations validating engineering proficiency</p>
+                </div>
+                
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card">
+                        <div class="cert-badge-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-provider">DeepLearning.AI</span>
+                            <h3 class="cert-name">Deep Learning Specialization</h3>
+                            <p class="cert-desc">Covers neural network structures, optimization parameters, CNNs, Sequence Models, and model operational strategies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card">
+                        <div class="cert-badge-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-provider">Google</span>
+                            <h3 class="cert-name">TensorFlow Developer Certificate</h3>
+                            <p class="cert-desc">Focuses on building and deploying TensorFlow neural networks for computer vision, time series forecasting, and natural language tasks.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card">
+                        <div class="cert-badge-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-provider">IBM</span>
+                            <h3 class="cert-name">Machine Learning with Python</h3>
+                            <p class="cert-desc">Practical execution of supervised and unsupervised ML algorithms, classification rules, evaluation parameters, and clustering methods.</p>
+                        </div>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card">
+                        <div class="cert-badge-container">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                        </div>
+                        <div class="cert-info">
+                            <span class="cert-provider">University of California, Davis</span>
+                            <h3 class="cert-name">SQL for Data Science</h3>
+                            <p class="cert-desc">Validates data retrieval capabilities, multi-table queries, subqueries, relational schema mapping, and performance optimization.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-reveal">
+            <div class="container">
+                <div class="contact-card">
+                    <div class="contact-header">
+                        <h2 class="contact-title">Let's Discuss Opportunities</h2>
+                        <p class="contact-subtitle">Currently seeking Fall 2026 / 2027 internship or junior engineering roles</p>
+                    </div>
+                    
+                    <div class="contact-body">
+                        <p class="contact-pitch">
+                            If you are looking for an AI/Data Science engineering student with a strong technical drive, proven project outcomes, and a commitment to model transparency, I would love to connect.
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <span class="contact-label">Primary Email</span>
+                                <a href="mailto:hello@ayeesha.dev" class="contact-value link-accent">hello@ayeesha.dev</a>
+                            </div>
+                            <div class="contact-item">
+                                <span class="contact-label">Location Base</span>
+                                <span class="contact-value">San Francisco, CA (Placeholder)</span>
+                            </div>
+                        </div>
+
+                        <div class="contact-actions-grid">
+                            <button id="direct-email-btn" class="btn btn-primary" onclick="window.location.href='mailto:hello@ayeesha.dev';">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <span>Send Direct Email</span>
+                            </button>
+                            <a href="https://github.com/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                <span>GitHub Profile</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Site Footer -->
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Ayeesha. Built statically using HTML5, CSS3, & Vanilla JavaScript.</p>
+            <div class="footer-links">
+                <a href="sitemap.xml" class="footer-link">Sitemap</a>
+                <span class="footer-dot">•</span>
+                <a href="#" class="footer-link">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
